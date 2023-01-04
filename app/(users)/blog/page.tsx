@@ -1,5 +1,6 @@
 import { groq } from 'next-sanity';
 import { client } from '../../../lib/sanity.client';
+import BlogList from '../../../components/BlogList';
 
 const query = groq`
     *[_type== 'post'] {
@@ -14,7 +15,7 @@ async function BlogPage() {
 
     return (
         <div>
-            <h1 className="text-4xl text-white">Blog Page</h1>
+            <BlogList posts={posts} />
         </div>
     );
 }
