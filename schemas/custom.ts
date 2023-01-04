@@ -26,8 +26,40 @@ export default {
             of: [{ type: 'block' }],
         },
         {
-            name: 'image',
-            title: 'Image',
+            name: 'image_black',
+            title: 'Image black',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        },
+        {
+            name: 'image_grey',
+            title: 'Image grey',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        },
+        {
+            name: 'image_blue',
+            title: 'Image blue',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        },
+        {
+            name: 'image_putty',
+            title: 'Image putty',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        },
+        {
+            name: 'image_white',
+            title: 'Image white',
             type: 'image',
             options: {
                 hotspot: true,
