@@ -74,20 +74,12 @@ interface Curated extends Base {
     name: string;
     slug: Slug;
     description: Block[];
-    image_black: Image;
-    image_grey: Image;
-    image_blue: Image;
-    image_putty: Image;
-    image_white: Image;
+    main_image: Image;
 }
 
 interface Custom extends Base {
     name: string;
     slug: Slug;
     description: Block[];
-    image_black: Image;
-    image_grey: Image;
-    image_blue: Image;
-    image_putty: Image;
-    image_white: Image;
+    main_image: Image;
 }
