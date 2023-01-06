@@ -8,6 +8,8 @@ const query = groq`
         } | order(_createdAt asc)
 `;
 
+export const revalidate = 60;
+
 async function CuratedPage() {
     const products = await client.fetch(query);
     return (

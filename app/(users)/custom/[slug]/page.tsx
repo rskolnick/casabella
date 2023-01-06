@@ -14,6 +14,21 @@ type Props = {
     };
 };
 
+export const revalidate = 60;
+
+export async function generateStaticParams() {
+    const query = groq`*[_type='custom']{
+        slug
+    }`;
+
+    const slugs: Custom[] = await client.fetch(query);
+    const slugRoutes = slugs.map((slug) => slug.slug.current);
+
+    return slugRoutes.map((slug) => ({
+        slug,
+    }));
+}
+
 async function CustomProduct({ params: { slug } }: Props) {
     const query = groq`
         *[_type== 'custom' && slug.current == $slug][0] 

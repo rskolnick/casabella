@@ -10,6 +10,8 @@ const query = groq`
     } | order(_createdAt desc)
 `;
 
+export const revalidate = 60;
+
 async function BlogPage() {
     const posts = await client.fetch(query);
 
