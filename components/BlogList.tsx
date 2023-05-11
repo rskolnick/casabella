@@ -11,7 +11,7 @@ type Props = {
 function BlogList({ posts }: Props) {
     return (
         <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-40 md:pb-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-12">
                 {posts.map((post) => (
                     <ClientSideRoute
                         key={post._id}
@@ -25,7 +25,7 @@ function BlogList({ posts }: Props) {
                                     alt={post.author.name}
                                     fill
                                 />
-                                <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
+                                <div className="absolute bottom-0 w-full bg-opacity-10 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
                                     <div>
                                         <p className="font-bold">
                                             {post.title}
@@ -40,7 +40,7 @@ function BlogList({ posts }: Props) {
                                             })}
                                         </p>
                                     </div>
-                                    <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
+                                    {/* <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
                                         {post.categories.map((category) => (
                                             <div
                                                 key={category._id}
@@ -49,7 +49,7 @@ function BlogList({ posts }: Props) {
                                                 <p>{category.title}</p>
                                             </div>
                                         ))}
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             <div className="text-white mt-5 flex-1">

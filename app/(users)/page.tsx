@@ -1,5 +1,11 @@
 import Image from 'next/image';
-import Link from 'next/link';
+
+export const metadata = {
+    title: 'Casa Bella Outdoor Kitchen Cabinetry',
+    keywords: 'outdoor kitchen cabinetry, outdoor cabinetry',
+    description:
+        'Casa Bella Outdoor Cabinetry is a leading manufacturer of high end outdoor kitchen islands. Build your dream outdoor kitchen today.',
+};
 
 export default function HomePage() {
     return (
@@ -13,6 +19,7 @@ export default function HomePage() {
                     src="/Venetian.jpg"
                     className="h-full w-full object-cover"
                     alt="Casa Bella Venetian Island Package"
+                    priority={true}
                 />
             </div>
             {/* <div className="text-white flex justify-center">

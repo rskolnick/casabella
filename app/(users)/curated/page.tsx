@@ -1,6 +1,7 @@
 import { groq } from 'next-sanity';
 import { client } from '../../../lib/sanity.client';
 import CuratedList from '../../../components/CuratedList';
+import { Suspense } from 'react';
 
 const query = groq`
     *[_type== 'curated'] {
@@ -14,7 +15,15 @@ async function CuratedPage() {
     const products = await client.fetch(query);
     return (
         <div>
-            <CuratedList products={products} />
+            <Suspense
+                fallback={
+                    <p className="flex items-center justify-center text-white">
+                        Loading...
+                    </p>
+                }
+            >
+                <CuratedList products={products} />
+            </Suspense>
         </div>
     );
 }

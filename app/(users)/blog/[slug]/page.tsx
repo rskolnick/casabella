@@ -51,14 +51,14 @@ async function Post({ params: { slug } }: Props) {
             </div>
             <section className="space-y-2 border border-[#396fb5] text-white">
                 <div className="relative min-h-56 flex flex-col md:flex-row justify-between">
-                    <div className="absolute top-0 w-full h-full opacity-20 blur-sm p-10">
+                    {/* <div className="absolute top-0 w-full h-full opacity-20 blur-sm p-10">
                         <Image
                             className="object-cover object-center mx-auto"
                             src={urlFor(post.mainImage).url()}
                             alt={post.author.name}
                             fill
                         />
-                    </div>
+                    </div> */}
                     <section className="p-5 bg-[#396fb5] w-full">
                         <div className="flex flex-col md:flex-row justify-between gap-y-5">
                             <div>
@@ -77,12 +77,13 @@ async function Post({ params: { slug } }: Props) {
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Image
-                                    className="rounded-full"
+                                    className="rounded-full aspect-square object-cover"
                                     src={urlFor(post.author.image).url()}
                                     alt={post.author.name}
                                     height={40}
                                     width={40}
                                 />
+
                                 <div className="w-64">
                                     <h3 className="text-lg font-bold">
                                         {post.author.name}
@@ -92,12 +93,12 @@ async function Post({ params: { slug } }: Props) {
                             </div>
                         </div>
                         <div>
-                            <h2 className="italic pt-10">{post.description}</h2>
-                            <div className="flex items-center justify-end mt-auto space-x-2">
+                            {/* <h2 className="italic pt-10">{post.description}</h2> */}
+                            <div className="flex items-center justify-end mt-auto space-x-2 pt-12">
                                 {post.categories.map((category) => (
                                     <p
                                         key={category._id}
-                                        className="bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-semibold mt-4"
+                                        className="bg-white text-[#396fb5] px-3 py-1 rounded-full text-sm font-semibold mt-4"
                                     >
                                         {category.title}
                                     </p>
@@ -107,7 +108,7 @@ async function Post({ params: { slug } }: Props) {
                     </section>
                 </div>
             </section>
-            <section className="text-white">
+            <section className="text-white pt-10">
                 <PortableText
                     value={post.body}
                     components={RichTextComponents}
