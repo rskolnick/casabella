@@ -22,7 +22,7 @@ function BlogList({ posts }: Props) {
                                 <Image
                                     className="object-cover object-left lg:object-center"
                                     src={urlFor(post.mainImage).url()}
-                                    alt={post.author.name}
+                                    alt={post.title}
                                     fill
                                 />
                                 <div className="absolute bottom-0 w-full bg-opacity-10 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
