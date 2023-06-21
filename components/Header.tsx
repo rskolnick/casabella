@@ -28,7 +28,7 @@ function Header() {
             </div>
             <div>
                 <Link
-                    className="hidden px-5 py-3 text-sm md:text-base text-[#396fb5] sm:flex items-center rounded-full text-center bg-white hover:bg-gray-200"
+                    className="hidden px-5 py-3 text-sm md:text-base text-[#396fb5] lg:flex items-center rounded-full text-center bg-white hover:bg-gray-200"
                     href="/locator"
                 >
                     Find a Local Dealer
