@@ -42,7 +42,7 @@ async function Post({ params: { slug } }: Props) {
     const post: Post = await client.fetch(query, { slug });
 
     return (
-        <article className="px-10 pb-28 max-w-7xl mx-auto">
+        <article className="px-10 pb-28 max-w-7xl mx-auto bg-slate-900">
             <div>
                 <Link href="/blog" className="text-white flex items-center">
                     <ArrowLeftIcon className="h-10 w-10 p-2" />
@@ -108,7 +108,7 @@ async function Post({ params: { slug } }: Props) {
                     </section>
                 </div>
             </section>
-            <section className="text-white pt-10">
+            <section className="text-white pt-10 px-4">
                 <PortableText
                     value={post.body}
                     components={RichTextComponents}
