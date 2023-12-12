@@ -42,9 +42,12 @@ async function Post({ params: { slug } }: Props) {
     const post: Post = await client.fetch(query, { slug });
 
     return (
-        <article className="px-10 pb-28 max-w-7xl mx-auto bg-slate-900">
+        <article className="px-10 pb-28 max-w-7xl mx-auto bg-slate-900 rounded-lg pt-2">
             <div>
-                <Link href="/blog" className="text-white flex items-center">
+                <Link
+                    href="/blog"
+                    className="text-white flex items-center my-1"
+                >
                     <ArrowLeftIcon className="h-10 w-10 p-2" />
                     Back to Inspiration
                 </Link>
